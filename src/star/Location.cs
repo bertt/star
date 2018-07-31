@@ -40,6 +40,7 @@ namespace star
             }
         }
 
+        // ECEF: earth-centered, earth-fixed
         public Vector3d EcefPosition
         {
             get
