@@ -19,9 +19,9 @@ namespace star
         public const double EarthRadius = 6378137.0;
         public const double EarthEccentricity = 8.1819190842622e-2;
 
-        public static readonly Location NorthPole = new Location(90, 0, 0);
-        public static readonly Location MagneticNorthPole = new Location(86.073, 206.653, 0);
-        public static readonly Location SouthPole = new Location(-90, 0, 0);
+        //public static readonly Location NorthPole = new Location(90, 0, 0);
+        //public static readonly Location MagneticNorthPole = new Location(86.073, 206.653, 0);
+        //public static readonly Location SouthPole = new Location(-90, 0, 0);
 
         const double ToRad = Math.PI / 180;
 

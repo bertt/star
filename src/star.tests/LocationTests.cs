@@ -5,7 +5,7 @@ namespace star.tests
     [TestFixture]
     public class LocationTests
     {
-        private Location locationPK = new Location(52.340395, 4.911608);
+        private Location locationPK = new Location(4.911608, 52.340395);
 
         [Test]
         public void CreateLocationTest()
@@ -20,9 +20,9 @@ namespace star.tests
         {
             var position = locationPK.Position;
 
-            Assert.IsTrue(position.X == 3882535.0098389126);
-            Assert.IsTrue(position.Y == 5030739.6132105617);
-            Assert.IsTrue(position.Z == 546088.30075199076);
+            Assert.IsTrue(position.X == 3882535.0098389131);
+            Assert.IsTrue(position.Y == 333643.05321155547);
+            Assert.IsTrue(position.Z == 5049280.7211708706);
         }
 
         [Test]
@@ -31,9 +31,9 @@ namespace star.tests
         {
             var positionEcef = locationPK.EcefPosition;
 
-            Assert.IsTrue(positionEcef.X == 45499319.920485817);
-            Assert.IsTrue(positionEcef.Y == 58955097.769388907);
-            Assert.IsTrue(positionEcef.Z == 6356752.31424518);
+            Assert.IsTrue(positionEcef.X == 4920828.86114275);
+            Assert.IsTrue(positionEcef.Y == 422868.14192342);
+            Assert.IsTrue(positionEcef.Z == 6356752.3142451793);
         }
 
         [Test]
@@ -47,7 +47,11 @@ namespace star.tests
         {
             var locationString = locationPK.ToString();
 
-            Assert.IsTrue(locationString == "[Lat=4.911608, Lon=52.340395, Alt=0]");
+            Assert.IsTrue(locationString == "[Lat=52.340395, Lon=4.911608, Alt=0]");
         }
     }
 }
+
+
+
+
