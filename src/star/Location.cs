@@ -64,12 +64,12 @@ namespace star
 
         public Location OffsetAltitude(double offset)
         {
-            return new Location(Latitude, Longitude, Altitude + offset);
+            return new Location(Longitude, Latitude, Altitude + offset);
         }
 
         public override string ToString()
         {
-            return string.Format("[Lat={0}, Lon={1}, Alt={2}]", Latitude, Longitude, Altitude);
+            return string.Format("[Lon={0}, Lat={1}, Alt={2}]", Longitude, Latitude, Altitude);
         }
     }
 }

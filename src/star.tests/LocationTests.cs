@@ -47,7 +47,7 @@ namespace star.tests
         {
             var locationString = locationPK.ToString();
 
-            Assert.IsTrue(locationString == "[Lat=52.340395, Lon=4.911608, Alt=0]");
+            Assert.IsTrue(locationString == "[Lon=4.911608, Lat=52.340395, Alt=0]");
         }
     }
 }
