@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="LocationOrientationMatrixTests.cs" />
     <Compile Include="LocationTests.cs" />
+    <Compile Include="MatrixTests.cs" />
     <Compile Include="ProjectionMatrixTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

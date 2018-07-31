@@ -26,7 +26,7 @@ namespace star
             //
             // 3. Orient to face the north pole
             //
-            var northPos = new Location(location.Longitude, location.Latitude + 0.1, location.Altitude).Position;
+            var northPos = new Location(location.Latitude + 0.1, location.Longitude, location.Altitude).Position;
 
             var northZAxis = (pos - northPos);
             northZAxis.Normalize();

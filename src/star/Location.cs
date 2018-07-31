@@ -9,7 +9,7 @@ namespace star
         public double Longitude;
         public double Altitude;
 
-        public Location(double longitude, double latitude, double altitude = 0)
+        public Location(double latitude, double longitude, double altitude = 0)
         {
             Latitude = latitude;
             Longitude = longitude;
@@ -64,12 +64,12 @@ namespace star
 
         public Location OffsetAltitude(double offset)
         {
-            return new Location(Longitude, Latitude, Altitude + offset);
+            return new Location(Latitude, Longitude, Altitude + offset);
         }
 
         public override string ToString()
         {
-            return string.Format("[Lon={0}, Lat={1}, Alt={2}]", Longitude, Latitude, Altitude);
+            return string.Format("[Lat={0}, Lon={1}, Alt={2}]", Latitude, Longitude, Altitude);
         }
     }
 }
