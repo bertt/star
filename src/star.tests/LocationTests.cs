@@ -16,24 +16,28 @@ namespace star.tests
         }
 
         [Test]
-        public void LocationPositionTest()
-        {
-            var position = locationPK.Position;
-
-            Assert.IsTrue(position.X == 3882535.0098389131);
-            Assert.IsTrue(position.Y == 333643.05321155547);
-            Assert.IsTrue(position.Z == 5049280.7211708706);
-        }
-
-        [Test]
         // ECEF: earth-centered, earth-fixed
         public void LocationEcefPositionTest()
         {
             var positionEcef = locationPK.EcefPosition;
-            Assert.IsTrue(positionEcef.X == 4920828.86114275);
-            Assert.IsTrue(positionEcef.Y == 422868.14192342);
-            Assert.IsTrue(positionEcef.Z == 6356752.3142451793);
+
+            Assert.IsTrue(positionEcef.X == 3890705.2774487687);
+            Assert.IsTrue(positionEcef.Y == 334345.15970228892);
+            Assert.IsTrue(positionEcef.Z == 5059907.0330199348);
         }
+
+        [Test]
+        // ECEF: earth-centered, earth-fixed
+        public void LocationEnuPositionTest()
+        {
+            var myposition = new OpenTK.Vector3d(52.35, 4.81, 0);
+            var enu = locationPK.EnuPosition(myposition);
+
+            Assert.IsTrue(enu.X == 0.31019446946447715);
+            Assert.IsTrue(enu.Y == -42.0973942540586);
+            Assert.IsTrue(enu.Z == -6391527.4271755284);
+        }
+
 
         [Test]
         public void OffsetAltitudeTest()
