@@ -5,17 +5,17 @@ namespace star
 {
     public static class ProjectionMatrix
     {
+        const double DEGREES_TO_RADIANS = Math.PI / 180.0;
         // VideoCamera videoCamera (videoCamera.FieldOfView), UIImage frame.Size.Height, frame.Size.Height
-        public static Matrix4d GetProjectionMatrix(double fov, double width, double height)
+        public static Matrix4d GetProjectionMatrix(double aspect, float zNear, float zFar)
         {
-            // Aspect is inverted because we rotate the image
-            // What are 0.01 and 4700?
+            var fov = 60;
+            // Aspect is height/widht (in portrait mode only?)
             return Matrix4d.CreatePerspectiveFieldOfView(
                 fovy: fov * Math.PI / 180,
-                aspect: height / width,
-                zNear: 0.01,
-                zFar: 4700);
+                aspect: aspect,
+                zNear: zNear,
+                zFar: zFar);
         }
-
     }
 }
