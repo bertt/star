@@ -6,6 +6,7 @@ namespace star.tests
     public class LocationTests
     {
         private Location locationPK = new Location(52.340395, 4.911608);
+        // 52.342327, 4.913019
 
         [Test]
         public void CreateLocationTest()
@@ -30,12 +31,13 @@ namespace star.tests
         // ECEF: earth-centered, earth-fixed
         public void LocationEnuPositionTest()
         {
-            var myposition = new OpenTK.Vector3d(52.35, 4.81, 0);
+            // 52.341362, 4.912569
+            var myposition = new OpenTK.Vector3d(52.341362, 4.912569, 0);
             var enu = locationPK.EnuPosition(myposition);
 
-            Assert.IsTrue(enu.X == 0.31019446946447715);
-            Assert.IsTrue(enu.Y == -42.0973942540586);
-            Assert.IsTrue(enu.Z == -6391527.4271755284);
+            Assert.IsTrue(enu.X == 0.41312640806427225);
+            Assert.IsTrue(enu.Y == -42.097533230204135);
+            Assert.IsTrue(enu.Z == -6391527.4270682726);
         }
 
 
