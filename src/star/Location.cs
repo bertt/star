@@ -61,7 +61,6 @@ namespace star
             return new Vector3d(e, n, u);
         }
 
-
         public Location OffsetAltitude(double offset)
         {
             return new Location(Latitude, Longitude, Altitude + offset);
